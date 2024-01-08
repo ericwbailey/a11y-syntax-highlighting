@@ -1,10 +1,18 @@
-<svg width="320" height="40">
-	<rect width="40" height="40" x="0" y="0" fill="#2B2B2B" /> 
-	<rect width="40" height="40" x="40" y="0" fill="#00E0E0" /> 
-	<rect width="40" height="40" x="80" y="0" fill="#D4D0AB" /> 
-	<rect width="40" height="40" x="120" y="0" fill="#ABE338" /> 
-	<rect width="40" height="40" x="160" y="0" fill="#FFD700" /> 
-	<rect width="40" height="40" x="200" y="0" fill="#DCC6E0" /> 
-	<rect width="40" height="40" x="240" y="0" fill="#F8F8F2" /> 
-	<rect width="40" height="40" x="280" y="0" fill="#FFA07A" /> 
+<svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1760_78)">
+<path d="M40 0H0V40H40V0Z" fill="#2B2B2B"/>
+<path d="M80 0H40V40H80V0Z" fill="#F8F8F2"/>
+<path d="M120 0H80V40H120V0Z" fill="#D4D0AB"/>
+<path d="M160 0H120V40H160V0Z" fill="#00E0E0"/>
+<path d="M200 0H160V40H200V0Z" fill="#ABE338"/>
+<path d="M240 0H200V40H240V0Z" fill="#F8F8F2"/>
+<path d="M280 0H240V40H280V0Z" fill="#DCC6E0"/>
+<path d="M320 0H280V40H320V0Z" fill="#FFA07A"/>
+<path d="M360 0H320V40H360V0Z" fill="#FFD700"/>
+</g>
+<defs>
+<clipPath id="clip0_1760_78">
+<rect width="360" height="40" fill="white"/>
+</clipPath>
+</defs>
 </svg>
