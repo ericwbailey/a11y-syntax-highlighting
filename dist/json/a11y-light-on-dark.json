@@ -1,0 +1,47 @@
+{
+  "background": {
+    "hex":  "#2b2b2b",
+    "rgba": "rgba(43, 43, 43, 1)",
+    "hsla": "hsla(0, 0%, 17%, 1)"
+  },
+  "no-token": {
+    "hex":  "#f8f8f2",
+    "rgba": "rgba(248, 248, 242, 1)",
+    "hsla": "hsla(60, 30%, 96%, 1)"
+  },
+  "comment": {
+    "hex":  "#d4d0ab",
+    "rgba": "rgba(212, 208, 171, 1)",
+    "hsla": "hsla(54, 32%, 75%, 1)"
+  },
+  "blue": {
+    "hex":  "#00e0e0",
+    "rgba": "rgba(0, 224, 224, 1)",
+    "hsla": "hsla(180, 100%, 44%, 1)"
+  },
+  "green": {
+    "hex":  "#abe338",
+    "rgba": "rgba(171, 227, 56, 1)",
+    "hsla": "hsla(80, 75%, 55%, 1)"
+  },
+  "gray": {
+    "hex":  "#f8f8f2",
+    "rgba": "rgba(248, 248, 242, 1)",
+    "hsla": "hsla(60, 30%, 96%, 1)"
+  },
+  "purple": {
+    "hex":  "#dcc6e0",
+    "rgba": "rgba(220, 198, 224, 1)",
+    "hsla": "hsla(291, 30%, 83%, 1)"
+  },
+  "red": {
+    "hex":  "#ffa07a",
+    "rgba": "rgba(255, 160, 122, 1)",
+    "hsla": "hsla(17, 100%, 74%, 1)"
+  },
+  "yellow": {
+    "hex":  "#ffd700",
+    "rgba": "rgba(255, 215, 0, 1)",
+    "hsla": "hsla(51, 100%, 50%, 1)"
+  }
+}

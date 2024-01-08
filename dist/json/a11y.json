@@ -1,199 +1,110 @@
 {
-    "dark": {
-        "background": {
-            "mine-shaft": {
-                "name": "Mine Shaft",
-                "code": {
-                    "hex":  "2b2b2b",
-                    "rgba": [43, 43, 43, 1],
-                    "hsla": [0, 0, 17, 1]
-                }
-            }
-        },
-        "foreground": {
-            "bright-turquoise": {
-                "name": "Bright Turquoise",
-                "compliance": {
-                    "ratio":  "8.59:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "00e0e0",
-                    "rgba": [0, 224, 224, 1],
-                    "hsla": [180, 100, 44, 1]
-                }
-            },
-            "chino": {
-                "name": "Chino",
-                "compliance": {
-                    "ratio":  "9.04:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "d4d0ab",
-                    "rgba": [212, 208, 171, 1],
-                    "hsla": [54, 32, 75, 1]
-                }
-            },
-            "conifer": {
-                "name": "Conifer",
-                "compliance": {
-                    "ratio":  "9.29:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "abe338",
-                    "rgba": [171, 227, 56, 1],
-                    "hsla": [80, 75, 55, 1]
-                }
-            },
-            "gold": {
-                "name": "Gold",
-                "compliance": {
-                    "ratio":  "10.09:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "ffd700",
-                    "rgba": [255, 215, 0, 1],
-                    "hsla": [51, 100, 50, 1]
-                }
-            },
-            "snuff": {
-                "name": "Snuff",
-                "compliance": {
-                    "ratio":  "8.90:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "dcc6e0",
-                    "rgba": [220, 198, 224, 1],
-                    "hsla": [291, 30, 83, 1]
-                }
-            },
-            "spring-wood": {
-                "name": "Spring Wood",
-                "compliance": {
-                    "ratio":  "13.28:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "f8f8f2",
-                    "rgba": [248, 248, 242, 1],
-                    "hsla": [60, 30, 96, 1]
-                }
-            },
-            "vivid-tangerine": {
-                "name": "Vivid Tangerine",
-                "compliance": {
-                    "ratio":  "7.12:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "ffa07a",
-                    "rgba": [255, 160, 122, 1],
-                    "hsla": [17, 100, 74, 1]
-                }
-            }
-        }
+  "background": {
+    "light-on-dark": {
+      "hex":  "#2b2b2b",
+      "rgba": "rgba(43, 43, 43, 1)",
+      "hsla": "hsla(0, 0%, 17%, 1)"
     },
-    "light": {
-        "background": {
-            "white": {
-                "name": "White",
-                "code": {
-                    "hex":  "fefefe",
-                    "rgba": [254, 254, 254, 1],
-                    "hsla": [0, 0, 100, 1]
-                }
-            }
-        },
-        "foreground": {
-            "chelsea-gem": {
-                "name": "Chelsea Gem",
-                "compliance": {
-                    "ratio":  "4.87:1",
-                    "normal": "AA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "00e0e0",
-                    "rgba": [170, 93, 0, 1],
-                    "hsla": [33, 100, 33, 1]
-                }
-            },
-            "deep-cerulean": {
-                "name": "Deep Cerulean",
-                "compliance": {
-                    "ratio":  "4.51:1",
-                    "normal": "AA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "007faa",
-                    "rgba": [0, 127, 170, 1],
-                    "hsla": [195, 100, 33, 1]
-                }
-            },
-            "dove-gray": {
-                "name": "Dove Gray",
-                "compliance": {
-                    "ratio":  "5.44:1",
-                    "normal": "AA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "696969",
-                    "rgba": [105, 105, 105, 1],
-                    "hsla": [0, 0, 41, 1]
-                }
-            },
-            "emperor": {
-                "name": "Emperor",
-                "compliance": {
-                    "ratio":  "7.51:1",
-                    "normal": "AAA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "545454",
-                    "rgba": [84, 84, 84, 1],
-                    "hsla": [0, 0, 33, 1]
-                }
-            },
-            "japanese-laurel": {
-                "name": "Japanese Laurel",
-                "compliance": {
-                    "ratio":  "5.09:1",
-                    "normal": "AA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "008000",
-                    "rgba": [0, 128, 0, 1],
-                    "hsla": [120, 100, 25, 1]
-                }
-            },
-            "thunderbird": {
-                "name": "Thunderbird",
-                "compliance": {
-                    "ratio":  "5.02:1",
-                    "normal": "AA",
-                    "large":  "AAA"
-                },
-                "code": {
-                    "hex":  "d91e18",
-                    "rgba": [217, 30, 24, 1],
-                    "hsla": [2, 80, 47, 1]
-                }
-            }
-        }
+    "dark-on-light": {
+      "hex":  "#fefefe",
+      "rgba": "rgba(254, 254, 254, 1)",
+      "hsla": "hsla(0, 0%, 100%, 1)"
     }
+  },
+  "no-token": {
+    "light-on-dark": {
+      "hex":  "#f8f8f2",
+      "rgba": "rgba(248, 248, 242, 1)",
+      "hsla": "hsla(60, 30%, 96%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#545454",
+      "rgba": "rgba(84, 84, 84, 1)",
+      "hsla": "hsla(0, 0%, 33%, 1)"
+    }
+  },
+  "comment": {
+    "light-on-dark": {
+      "hex":  "#d4d0ab",
+      "rgba": "rgba(212, 208, 171, 1)",
+      "hsla": "hsla(54, 32%, 75%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#802200",
+      "rgba": "rgba(128, 34, 0, 1)",
+      "hsla": "hsla(16, 100%, 25%, 1)"
+    }
+  },
+  "blue": {
+    "light-on-dark": {
+      "hex":  "#00e0e0",
+      "rgba": "rgba(0, 224, 224, 1)",
+      "hsla": "hsla(180, 100%, 44%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#007299",
+      "rgba": "rgba(0, 114, 153, 1)",
+      "hsla": "hsla(195, 100%, 30%, 1)"
+    }
+  },
+  "green": {
+    "light-on-dark": {
+      "hex":  "#abe338",
+      "rgba": "rgba(171, 227, 56, 1)",
+      "hsla": "hsla(80, 75%, 55%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#008000",
+      "rgba": "rgba(0, 128, 0, 1)",
+      "hsla": "hsla(120, 100%, 25%, 1)"
+    }
+  },
+  "gray": {
+    "light-on-dark": {
+      "hex":  "#f8f8f2",
+      "rgba": "rgba(248, 248, 242, 1)",
+      "hsla": "hsla(60, 30%, 96%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#696969",
+      "rgba": "rgba(105, 105, 105, 1)",
+      "hsla": "hsla(0, 0%, 41%, 1)"
+    }
+  },
+  "purple": {
+    "light-on-dark": {
+      "hex":  "#dcc6e0",
+      "rgba": "rgba(220, 198, 224, 1)",
+      "hsla": "hsla(291, 30%, 83%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#9400d3",
+      "rgba": "rgba(148, 0, 211, 1)",
+      "hsla": "hsla(282, 100%, 41%, 1)"
+    }
+  },
+  "red": {
+    "light-on-dark": {
+      "hex":  "#ffa07a",
+      "rgba": "rgba(255, 160, 122, 1)",
+      "hsla": "hsla(17, 100%, 74%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#d91e18",
+      "rgba": "rgba(217, 30, 24, 1)",
+      "hsla": "hsla(2, 80%, 47%, 1)"
+    }
+  },
+  "yellow": {
+    "light-on-dark": {
+      "hex":  "#ffd700",
+      "rgba": "rgba(255, 215, 0, 1)",
+      "hsla": "hsla(51, 100%, 50%, 1)"
+    },
+    "dark-on-light": {
+      "hex":  "#856514",
+      "rgba": "rgba(133, 101, 20, 1)",
+      "hsla": "hsla(43, 74%, 30%, 1)"
+    }
+  }
 }
