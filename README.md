@@ -89,6 +89,7 @@ Both themes have enhanced support for [Windows High Contrast Mode](https://suppo
 - [Oddbird CSS Sandbox](https://css.oddbird.net/)
 - [cssnano](https://cssnano.co/)
 - [Mark Llobrera](https://markllobrera.com/)
+- [Kieran Barker](https://barker.codes/)
 
 Run across it being used elsewhere? [Let me know](https://ericwbailey.website#contact)!
 
