@@ -1,10 +1,13 @@
 /*
- * a11y-dark theme for JavaScript, CSS, and HTML
+ * a11y theme for JavaScript, CSS, and HTML
  * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
  * @author ericwbailey
  */
 
-@layer prism {
+ /*
+  MARK: Setup
+ */
+ @layer prism {
   :root {
     --prism-a11y-border-radius: 0.3em;
     --prism-a11y-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -13,44 +16,44 @@
     --prism-a11y-code-block-padding: 1em;
     --prism-a11y-code-inline-padding: 0.1em;
     --prism-a11y-width-border: 1px;
-    --prism-a11y-width-tab: 4;
+    --prism-a11y-width-tab: 2;
   }
 
-  @media (prefers-color-scheme: light) {
+  @media (forced-colors: none) and (prefers-color-scheme: light) {
     :root {
-      --prism-a11y-color-background: #2b2b2b;
-      --prism-a11y-color-text-no-token: #f8f8f2;
-      --prism-a11y-color-text-comment: #d4d0ab;
-      --prism-a11y-color-text-blue: #00e0e0;
-      --prism-a11y-color-text-green: #abe338;
-      --prism-a11y-color-text-gray: #f8f8f2;
-      --prism-a11y-color-text-purple: #dcc6e0;
-      --prism-a11y-color-text-red: #ffa07a;
-      --prism-a11y-color-text-yellow: #ffd700;
-      --prism-a11y-plugin-color-border: rgba(255, 217, 0, 0.55);
-      --prism-a11y-plugin-color-background: rgba(255, 217, 0, 0.10);
+      --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+      --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+      --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+      --prism-a11y-color-text-blue: hsla(195, 100%, 30%, 1);
+      --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+      --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+      --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+      --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+      --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+      --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+      --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (forced-colors: none) and (prefers-color-scheme: dark) {
     :root {
-      --prism-a11y-color-background: #fefefe;
-      --prism-a11y-color-text-no-token: #545454;
-      --prism-a11y-color-text-comment: #802200;
-      --prism-a11y-color-text-blue: #007299;
-      --prism-a11y-color-text-green: #008000;
-      --prism-a11y-color-text-gray: #696969;
-      --prism-a11y-color-text-purple: #9400d3;
-      --prism-a11y-color-text-red: #d91e18;
-      --prism-a11y-color-text-yellow: #856514;
-      --prism-a11y-plugin-color-border: rgba(133, 101, 20, 0.55);
-      --prism-a11y-plugin-color-background: rgba(133, 101, 20, 0.10);
+      --prism-a11y-color-background: hsla(0, 0%, 17%, 1);
+      --prism-a11y-color-text-no-token: hsla(60, 30%, 96%, 1);
+      --prism-a11y-color-text-comment: hsla(54, 32%, 75%, 1);
+      --prism-a11y-color-text-blue: hsla(180, 100%, 44%, 1);
+      --prism-a11y-color-text-green: hsla(80, 75%, 55%, 1);
+      --prism-a11y-color-text-gray: hsla(60, 30%, 96%, 1);
+      --prism-a11y-color-text-purple: hsla(291, 30%, 83%, 1);
+      --prism-a11y-color-text-red: hsla(17, 100%, 74%, 1);
+      --prism-a11y-color-text-yellow: hsla(51, 100%, 50%, 1);
+      --prism-a11y-plugin-color-border: hsla(51, 100%, 50%, 0.55);
+      --prism-a11y-plugin-color-background: hsla(51, 100%, 50%, 0.1);
     }
   }
 
 
   /*
-  Theme
+  MARK: Theme
   */
   :where(
     code[class*="language-"],
@@ -179,7 +182,7 @@
 
 
   /*
-  Plugin support
+  MARK: Plugin support
   */
 
   /* Line highlight */
@@ -200,61 +203,26 @@
 
 
   /*
-  High contrast mode support
+  MARK: High contrast mode support
   */
-  @media screen and (forced-colors: active) {
+  @media (forced-colors: active) and (prefers-color-scheme: dark), (prefers-color-scheme: dark) {
     @layer syntax {
-      :where(
-        code[class*="language-"],
-        pre[class*="language-"]
-      ) {
-        color: CanvasText;
-        background: Canvas;
-      }
+        :root {
+          --prism-a11y-color-text-comment: GrayText;
+          --prism-a11y-color-text-blue: LinkText;
+          --prism-a11y-color-text-gray: LinkText;
+          --prism-a11y-color-text-red: CanvasText;
+          --prism-a11y-color-text-yellow: ButtonText;
+          --prism-a11y-plugin-color-border: LinkText;
+        }
 
-      :where(
-        :not(pre) > code[class*="language-"],
-        pre[class*="language-"]
-      ) {
-        background: Canvas;
-      }
-
-      .token.important {
-        background: Highlight;
-        color: Canvas;
-        font-weight: normal;
-      }
-
-      :where(
-        .token.atrule,
-        .token.attr-value,
-        .token.function,
-        .token.keyword,
-        .token.operator,
-        .token.selector 
-      ) {
-        font-weight: bold;
-      }
-
-      :where(
-        .token.attr-value,
-        .token.comment,
-        .token.doctype,
-        .token.function,
-        .token.keyword,
-        .token.operator,
-        .token.property,
-        .token.string
-      ) {
-        color: Highlight;
-      }
-
-      :where(
-        .token.attr-value,
-        .token.url
-      ) {
-        font-weight: normal;
-      }
+        :where(
+          .token.boolean,
+          .token.number,
+          .token.keyword
+        ) {
+          font-weight: bold;
+        }
     }
   }
 }
