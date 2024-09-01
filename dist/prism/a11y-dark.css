@@ -4,10 +4,10 @@
  * @author ericwbailey
  */
 
- /*
-  MARK: Setup
- */
- @layer prism {
+/*
+ MARK: Setup
+*/
+@layer prism {
   :root {
     --prism-a11y-border-radius: 0.3em;
     --prism-a11y-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -190,23 +190,21 @@
   MARK: High contrast mode support
   */
   @media (forced-colors: active) and (prefers-color-scheme: dark), (prefers-color-scheme: dark) {
-    @layer syntax {
-        :root {
-          --prism-a11y-color-text-comment: GrayText;
-          --prism-a11y-color-text-blue: LinkText;
-          --prism-a11y-color-text-gray: LinkText;
-          --prism-a11y-color-text-red: CanvasText;
-          --prism-a11y-color-text-yellow: ButtonText;
-          --prism-a11y-plugin-color-border: LinkText;
-        }
+    :root {
+      --prism-a11y-color-text-comment: GrayText;
+      --prism-a11y-color-text-blue: LinkText;
+      --prism-a11y-color-text-gray: LinkText;
+      --prism-a11y-color-text-red: CanvasText;
+      --prism-a11y-color-text-yellow: ButtonText;
+      --prism-a11y-plugin-color-border: LinkText;
+    }
 
-        :where(
-          .token.boolean,
-          .token.number,
-          .token.keyword
-        ) {
-          font-weight: bold;
-        }
+    :where(
+      .token.boolean,
+      .token.number,
+      .token.keyword
+    ) {
+      font-weight: bold;
     }
   }
 }

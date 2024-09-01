@@ -4,10 +4,10 @@
  * @author ericwbailey
  */
 
- /*
-  MARK: Setup
- */
- @layer prism {
+/*
+ MARK: Setup
+*/
+@layer prism {
   :root {
     --prism-a11y-border-radius: 0.3em;
     --prism-a11y-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
