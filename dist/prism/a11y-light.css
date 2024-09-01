@@ -187,7 +187,7 @@
 
 
   /*
-  MARK: High contrast mode support
+  MARK: Forced color mode support
   */
   @media (forced-colors: active) and (prefers-color-scheme: dark), (prefers-color-scheme: dark) {
     @layer syntax {
