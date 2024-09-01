@@ -157,8 +157,7 @@ I'm not interested in that, but modifying the CSS Custom Property values is a go
 - [Sarah Higley](https://sarahmhigley.com/writing/)
 - [W3C Design System](https://design-system.w3.org/)
 
-Run across it being used elsewhere? Let me know!
-
+Run across it being used elsewhere? [Let me know](https://ericwbailey.website#contact)!
 
 ## Thanks
 
