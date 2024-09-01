@@ -122,29 +122,17 @@ MARK: Setup
 
 
   /*
-    MARK: High contrast mode support
+    MARK: Forced color mode support
   */
-  @media screen and (-ms-high-contrast: active) {
-    :where( 
-      .hljs-addition,
-      .hljs-attribute,
-      .hljs-built_in,
-      .hljs-builtin-name,
-      .hljs-bullet,
-      .hljs-comment,
-      .hljs-link,
-      .hljs-literal,
-      .hljs-meta,
-      .hljs-number,
-      .hljs-params,
-      .hljs-string,
-      .hljs-symbol,
-      .hljs-type,
-      .hljs-quote
-    ) {
-      color: highlight;
+  @media (forced-colors: active) and (prefers-color-scheme: dark), (prefers-color-scheme: dark) {
+    :root {
+      --highlight-a11y-color-text-comment: GrayText;
+      --highlight-a11y-color-text-blue: LinkText;
+      --highlight-a11y-color-text-gray: LinkText;
+      --highlight-a11y-color-text-red: CanvasText;
+      --highlight-a11y-color-text-yellow: ButtonText;
     }
-    
+
     :where( 
       .hljs-keyword,
       .hljs-selector-tag
