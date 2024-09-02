@@ -2,20 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>a11y-dark theme for Prism.js</title>
+	<title>a11y-light theme for Prism.js</title>
 	<script src="prism.js"></script>
-	<link rel="stylesheet" href="../../dist/prism/a11y-dark.css">
+	<link rel="stylesheet" href="../../dist/prism/a11y-light-on-light-dark-on-dark.css">
 
 	<style>
+		body {
+			background-color: #fefefe;
+			color: #2b2b2b;
+		}
 		pre {
-			height: 20em;
+			height: 30em;
 			width: 80vw;
+		}
+		@media (prefers-color-scheme: dark) {
+			body {
+				background-color: #2b2b2b;
+				color: #fefefe;
+			}
 		}
 	</style>
 </head>
 <body>
 
-<h1><a href="http://prismjs.com/">Prism.js</a> a11y-dark test</h1>
+<h1><a href="http://prismjs.com/">Prism.js</a> a11y-light test</h1>
 
 <h2>HTML</h2>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;

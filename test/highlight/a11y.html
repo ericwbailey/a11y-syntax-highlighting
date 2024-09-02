@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>a11y-dark theme for Highlight.js</title>
-	<link rel="stylesheet" href="../../dist/highlight/a11y-dark.css">
+	<title>a11y-light theme for Highlight.js</title>
+	<link rel="stylesheet" href="../../dist/prism/a11y-light-on-light-dark-on-dark.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 
 	<style>
+		body {
+			background-color: #fefefe;
+			color: #2b2b2b;
+		}
 		pre {
 			width: 80vw;
+		}
+		@media (prefers-color-scheme: dark) {
+			body {
+				background-color: #2b2b2b;
+				color: #fefefe;
+			}
 		}
 	</style>
 </head>
