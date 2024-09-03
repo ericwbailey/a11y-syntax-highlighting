@@ -17,10 +17,10 @@ MARK: Setup
       --highlight-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
       --highlight-a11y-color-text-blue: hsla(195, 100%, 30%, 1);
       --highlight-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+      --highlight-a11y-color-text-orange: hsla(33, 100%, 33%, 1);
       --highlight-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
       --highlight-a11y-color-text-red: hsla(2, 80%, 47%, 1);
       --highlight-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
-      --highlight-a11y-color-text-orange: hsla(33, 100%, 33%, 1);
       --highlight-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
       --highlight-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
     }
@@ -126,11 +126,18 @@ MARK: Setup
   */
   @media (forced-colors: active) and (prefers-color-scheme: dark), (prefers-color-scheme: dark) {
     :root {
+      --highlight-a11y-color-background: Canvas;
+      --highlight-a11y-color-text-no-token: CanvasText;
       --highlight-a11y-color-text-comment: GrayText;
       --highlight-a11y-color-text-blue: LinkText;
       --highlight-a11y-color-text-gray: LinkText;
+      --highlight-a11y-color-text-green: CanvasText;
+      --highlight-a11y-color-text-orange: CanvasText;
+      --highlight-a11y-color-text-purple: CanvasText;
       --highlight-a11y-color-text-red: CanvasText;
-      --highlight-a11y-color-text-yellow: ButtonText;
+      --highlight-a11y-color-text-yellow: GrayText;
+      --highlight-a11y-plugin-color-border: LinkText;
+      --highlight-a11y-plugin-color-background: Canvas;
     }
 
     :where( 

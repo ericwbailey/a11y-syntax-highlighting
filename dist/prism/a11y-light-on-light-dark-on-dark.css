@@ -207,12 +207,17 @@
   */
   @media (forced-colors: active) and (prefers-color-scheme: dark), (prefers-color-scheme: dark) {
     :root {
+      --prism-a11y-color-background: Canvas;
+      --prism-a11y-color-text-no-token: CanvasText;
       --prism-a11y-color-text-comment: GrayText;
       --prism-a11y-color-text-blue: LinkText;
       --prism-a11y-color-text-gray: LinkText;
+      --prism-a11y-color-text-green: CanvasText;
+      --prism-a11y-color-text-purple: CanvasText;
       --prism-a11y-color-text-red: CanvasText;
-      --prism-a11y-color-text-yellow: ButtonText;
+      --prism-a11y-color-text-yellow: GrayText;
       --prism-a11y-plugin-color-border: LinkText;
+      --prism-a11y-plugin-color-background: Canvas;
     }
 
     :where(
