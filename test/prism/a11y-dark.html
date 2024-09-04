@@ -1,0 +1,1561 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>a11y-dark theme for Prism.js</title>
+	<script src="prism.js"></script>
+	<link rel="stylesheet" href="../../dist/prism/a11y-dark.css">
+
+	<style>
+		body {
+			background-color: #fefefe;
+			color: #2b2b2b;
+		}
+		pre {
+			height: 30em;
+			width: 80vw;
+		}
+		@media (prefers-color-scheme: dark) {
+			body {
+				background-color: #2b2b2b;
+				color: #fefefe;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<h1><a href="http://prismjs.com/">Prism.js</a> a11y-dark test</h1>
+
+<h2>HTML</h2>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+
+&lt;script&gt;
+	// Just a lil&rsquo; script to show off that inline JS gets highlighted
+	window.console &amp;&amp; console.log('foo');
+&lt;/script&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.png&quot; /&gt;
+&lt;title&gt;Prism&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;themes/prism.css&quot; data-noprefix /&gt;
+&lt;script src=&quot;prefixfree.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;var _gaq = [['_setAccount', 'UA-33746269-1'], ['_trackPageview']];&lt;/script&gt;
+&lt;script src=&quot;https://www.google-analytics.com/ga.js&quot; async&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+	&lt;div class=&quot;intro&quot; data-src=&quot;templates/header-main.html&quot; data-type=&quot;text/html&quot;&gt;&lt;/div&gt;
+
+	&lt;ul id=&quot;features&quot;&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Dead simple&lt;/strong&gt;
+			Include prism.css and prism.js, use proper HTML5 code tags (&lt;code&gt;code.language-xxxx&lt;/code&gt;), done!
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Intuitive&lt;/strong&gt;
+			Language classes are inherited so you can only define the language once for multiple code snippets.
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Light as a feather&lt;/strong&gt;
+			The core is 2KB minified &amp;amp; gzipped. Languages add 0.3-0.5KB each, themes are around 1KB.
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Blazing fast&lt;/strong&gt;
+			Supports parallelism with Web Workers, if available.
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Extensible&lt;/strong&gt;
+			Define new languages or extend existing ones.
+			Add new features thanks to Prism&rsquo;s plugin architecture.
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;strong&gt;Easy styling&lt;/strong&gt;
+			All styling is done through CSS, with sensible class names like &lt;code&gt;.comment&lt;/code&gt;, &lt;code&gt;.string&lt;/code&gt;, &lt;code&gt;.property&lt;/code&gt; etc
+		&lt;/li&gt;
+	&lt;/ul&gt;
+
+&lt;/header&gt;
+
+&lt;section id=&quot;used-by&quot;&gt;
+	&lt;h1&gt;Used By&lt;/h1&gt;
+
+	&lt;p&gt;Prism is used on several websites, small and large. Some of them are:&lt;/p&gt;
+
+	&lt;div class=&quot;used-by-logos&quot;&gt;
+		&lt;a href=&quot;http://smashingmagazine.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;img/logo-smashing.png&quot; alt=&quot;Smashing Magazine&quot; /&gt;&lt;/a&gt;
+		&lt;a class=&quot;uswds&quot; href=&quot;https://playbook.cio.gov/designstandards/&quot; target=&quot;_blank&quot;&gt;U.S. Web Design Standards&lt;/a&gt;
+		&lt;a href=&quot;http://alistapart.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;img/logo-ala.png&quot; alt=&quot;A List Apart&quot; /&gt;&lt;/a&gt;
+
+		&lt;a href=&quot;https://developer.mozilla.org/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;img/logo-mdn.png&quot; alt=&quot;Mozilla Developer Network (MDN)&quot; /&gt;&lt;/a&gt;
+		&lt;a href=&quot;http://css-tricks.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;img/logo-css-tricks.png&quot; alt=&quot;CSS-Tricks&quot; /&gt;&lt;/a&gt;
+		&lt;a href=&quot;http://www.sitepoint.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;img/logo-sitepoint.png&quot; alt=&quot;SitePoint&quot; /&gt;&lt;/a&gt;
+		&lt;a href=&quot;https://www.drupal.org&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;img/logo-drupal.png&quot; alt=&quot;Drupal&quot; /&gt;&lt;/a&gt;
+	&lt;/div&gt;
+
+	&lt;p&gt;It&rsquo;s also used on &lt;a href=&quot;https://brendaneich.com/2012/10/harmony-of-dreams-come-true/&quot; target=&quot;_blank&quot;&gt;the personal blog of Brendan Eich&lt;/a&gt;, creator of JavaScript itself!&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;examples&quot;&gt;
+	&lt;h1&gt;Examples&lt;/h1&gt;
+
+	&lt;p&gt;The Prism source, highlighted with Prism (don&rsquo;t you just love how meta this is?):&lt;/p&gt;
+	&lt;pre data-src=&quot;prism.js&quot;&gt;&lt;/pre&gt;
+
+	&lt;p&gt;This page&rsquo;s CSS code, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src=&quot;style.css&quot;&gt;&lt;/pre&gt;
+
+	&lt;p&gt;This page&rsquo;s HTML, highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src=&quot;index.html&quot;&gt;&lt;/pre&gt;
+
+	&lt;p&gt;This page&rsquo;s logo (SVG), highlighted with Prism:&lt;/p&gt;
+	&lt;pre data-src=&quot;logo.svg&quot;&gt;&lt;/pre&gt;
+
+	&lt;p&gt;If you&rsquo;re still not sold, you can &lt;a href=&quot;examples.html&quot;&gt;view more examples&lt;/a&gt; or &lt;a href=&quot;test.html&quot;&gt;try it out for yourself&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;features-full&quot; class=&quot;language-markup&quot;&gt;
+	&lt;h1&gt;Full list of features&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Only 2KB&lt;/strong&gt; minified &amp;amp; gzipped (core). Each language definition adds roughly 300-500 bytes.&lt;/li&gt;
+		&lt;li&gt;Encourages good author practices. Other highlighters encourage or even force you to use elements that are semantically wrong,
+			like &lt;code&gt;&amp;lt;pre&gt;&lt;/code&gt; (on its own) or &lt;code&gt;&amp;lt;script&gt;&lt;/code&gt;.
+			Prism forces you to use the correct element for marking up code: &lt;code&gt;&amp;lt;code&gt;&lt;/code&gt;.
+			On its own for inline code, or inside a &amp;lt;pre&gt; for blocks of code.
+			In addition, the language is defined through the way recommended in the HTML5 draft: through a language-xxxx class.&lt;/li&gt;
+		&lt;li&gt;The language definition is inherited. This means that if multiple code snippets have the same language, you can just define it once, in one of their common ancestors.&lt;/li&gt;
+		&lt;li&gt;Supports &lt;strong&gt;parallelism with Web Workers&lt;/strong&gt;, if available. Disabled by default (&lt;a href=&quot;faq.html#why-is-asynchronous-highlighting-disabled-by-default&quot;&gt;why?&lt;/a&gt;).&lt;/li&gt;
+		&lt;li&gt;Very easy to extend without modifying the code, due to Prism&rsquo;s &lt;a href=&quot;#plugins&quot;&gt;plugin architecture&lt;/a&gt;. Multiple hooks are scattered throughout the source.&lt;/li&gt;
+		&lt;li&gt;Very easy to &lt;a href=&quot;extending.html#language-definitions&quot;&gt;define new languages&lt;/a&gt;. Only thing you need is a good understanding of regular expressions&lt;/li&gt;
+		&lt;li&gt;All styling is done through CSS, with &lt;a href=&quot;faq.html#how-do-i-know-which-tokens-i-can-style-for&quot;&gt;sensible class names&lt;/a&gt; rather than ugly namespaced abbreviated nonsense.&lt;/li&gt;
+		&lt;li&gt;Wide browser support: IE9+, Firefox, Chrome, Safari, &lt;a href=&quot;faq.html#this-page-doesnt-work-in-opera&quot;&gt;Opera&lt;/a&gt;, most Mobile browsers&lt;/li&gt;
+		&lt;li&gt;Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)&lt;/li&gt;
+		&lt;li&gt;Highlights inline code as well, not just code blocks&lt;/li&gt;
+		&lt;li&gt;Highlights nested languages (CSS in HTML, JavaScript in HTML)&lt;/li&gt;
+		&lt;li&gt;It doesn&rsquo;t force you to use any Prism-specific markup, not even a Prism-specific class name, only standard markup you should be using anyway. So, you can just try it for a while, remove it if you don&rsquo;t like it and leave no traces behind.&lt;/li&gt;
+		&lt;li&gt;Highlight specific lines and/or line ranges (requires &lt;a href=&quot;plugins/line-highlight/&quot;&gt;plugin&lt;/a&gt;)&lt;/li&gt;
+		&lt;li&gt;Show invisible characters like tabs, line breaks etc (requires &lt;a href=&quot;plugins/show-invisibles/&quot;&gt;plugin&lt;/a&gt;)&lt;/li&gt;
+		&lt;li&gt;Autolink URLs and emails, use Markdown links in comments (requires &lt;a href=&quot;plugins/autolinker/&quot;&gt;plugin&lt;/a&gt;)&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;limitations&quot;&gt;
+	&lt;h1&gt;Limitations&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Any pre-existing HTML in the code will be stripped off. &lt;a href=&quot;faq.html#if-pre-existing-html-is-stripped-off-how-can-i-highlight&quot;&gt;There are ways around it though&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;Regex-based so it *will* fail on &lt;a href=&quot;examples.html#failures&quot;&gt;certain edge cases&lt;/a&gt;.&lt;/li&gt;
+		&lt;li&gt;No IE 6-8 support. If someone can read code, they are probably in the 85% of the population with a modern browser.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;basic-usage&quot; class=&quot;language-markup&quot;&gt;
+	&lt;h1&gt;Basic usage&lt;/h1&gt;
+
+	&lt;p&gt;You will need to include the &lt;code&gt;prism.css&lt;/code&gt; and &lt;code&gt;prism.js&lt;/code&gt; files you downloaded in your page. Example:
+	&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&gt;
+&amp;lt;html&gt;
+&amp;lt;head&gt;
+	...&lt;/code&gt;
+	&lt;code class=&quot;highlight&quot;&gt;&amp;lt;link href=&quot;themes/prism.css&quot; rel=&quot;stylesheet&quot; /&gt;&lt;/code&gt;
+&lt;code&gt;&amp;lt;/head&gt;
+&amp;lt;body&gt;
+	...&lt;/code&gt;
+	&lt;code class=&quot;highlight&quot;&gt;&amp;lt;script src=&quot;prism.js&quot;&gt;&amp;lt;/script&gt;&lt;/code&gt;
+&lt;code&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;Prism does its best to encourage good authoring practices. Therefore, it only works with &lt;code&gt;&amp;lt;code&gt;&lt;/code&gt; elements, since marking up code without a &lt;code&gt;&amp;lt;code&gt;&lt;/code&gt; element is semantically invalid.
+	&lt;a href=&quot;http://www.w3.org/TR/html5/text-level-semantics.html#the-code-element&quot;&gt;According to the HTML5 spec&lt;/a&gt;, the recommended way to define a code language is a &lt;code&gt;language-xxxx&lt;/code&gt; class, which is what Prism uses.
+	To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple &lt;code&gt;&amp;lt;code&gt;&lt;/code&gt; elements have the same language, you can add the &lt;code&gt;language-xxxx&lt;/code&gt; class on one of their common ancestors.
+	This way, you can also define a document-wide default language, by adding a &lt;code&gt;language-xxxx&lt;/code&gt; class on the &lt;code&gt;&amp;lt;body&gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;html&gt;&lt;/code&gt; element.
+
+	&lt;p&gt;If you want to opt-out of highlighting for a &lt;code&gt;&amp;lt;code&gt;&lt;/code&gt; element that is a descendant of an element with a declared code language, you can add the class &lt;code&gt;language-none&lt;/code&gt; to it (or any non-existing language, really).&lt;/p&gt;
+
+	&lt;p&gt;The &lt;a href=&quot;https://www.w3.org/TR/html5/grouping-content.html#the-pre-element&quot;&gt;recommended way to mark up a code block&lt;/a&gt;
+	(both for semantics and for Prism) is a &lt;code&gt;&amp;lt;pre&gt;&lt;/code&gt; element with a &lt;code&gt;&amp;lt;code&gt;&lt;/code&gt; element inside, like so:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&amp;lt;pre&gt;&amp;lt;code class=&quot;language-css&quot;&gt;p { color: red }&amp;lt;/code&gt;&amp;lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;p&gt;If you use that pattern, the &lt;code&gt;&amp;lt;pre&gt;&lt;/code&gt; will automatically get the &lt;code&gt;language-xxxx&lt;/code&gt; class (if it doesn&rsquo;t already have it) and will be styled as a code block.&lt;/p&gt;
+
+	&lt;p&gt;If you want to prevent any elements from being automatically highlighted, you can use the attribute &lt;code&gt;data-manual&lt;/code&gt; on the &lt;code&gt;&amp;lt;script&gt;&lt;/code&gt; element you used for prism and use the &lt;a href=&quot;extending.html#api&quot;&gt;API&lt;/a&gt;.
+	Example:&lt;/p&gt;
+	&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&quot;prism.js&quot; data-manual&gt;&amp;lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;If you want to use Prism on the server or through the command line, Prism can be used with Node.js as well.
+    This might be useful if you're trying to generate static HTML pages with highlighted code for environments that don't support browser-side JS, like &lt;a href=&quot;https://www.ampproject.org/&quot;&gt;AMP pages&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;You can install Prism for Node.js by running:&lt;/p&gt;
+    &lt;pre&gt;&lt;code&gt;$ npm install prismjs&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;Example:&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;var Prism = require('prismjs');
+
+// The code snippet you want to highlight, as a string
+var code = &quot;var data = 1;&quot;;
+
+// Returns a highlighted HTML string
+var html = Prism.highlight(code, Prism.languages.javascript);&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;languages-list&quot; class=&quot;language-markup&quot;&gt;
+	&lt;h1&gt;Supported languages&lt;/h1&gt;
+	&lt;p&gt;This is the list of all &lt;span id=&quot;languages-list-count&quot;&gt;&lt;/span&gt; languages currently supported by Prism, with their corresponding alias, to use in place of &lt;code&gt;xxxx&lt;/code&gt; in the &lt;code&gt;language-xxxx&lt;/code&gt; class:&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;plugins&quot;&gt;
+	&lt;h1&gt;Plugins&lt;/h1&gt;
+	&lt;p&gt;Plugins are additional scripts (and CSS code) that extend Prism&rsquo;s functionality. Many of the following plugins are official, but are released as plugins to keep the Prism Core small for those who don&rsquo;t need the extra functionality.&lt;/p&gt;
+	&lt;ul class=&quot;plugin-list&quot;&gt;&lt;/ul&gt;
+
+	&lt;p&gt;No assembly required to use them. Just select them in the &lt;a href=&quot;download.html&quot;&gt;download&lt;/a&gt; page.&lt;/p&gt;
+	&lt;p&gt;It&rsquo;s very easy to &lt;a href=&quot;extending.html#writing-plugins&quot;&gt;write your own Prism plugins&lt;/a&gt;. Did you write a plugin for Prism that you want added to this list? &lt;a href=&quot;https://github.com/LeaVerou/prism&quot; target=&quot;_blank&quot;&gt;Send a pull request&lt;/a&gt;!&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;languages&quot;&gt;
+	&lt;h1&gt;Third-party language definitions&lt;/h1&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;https://github.com/SassDoc/prism-scss-sassdoc&quot;&gt;SassDoc Sass/Scss comments&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;tutorials&quot;&gt;
+	&lt;h1&gt;Third-party tutorials&lt;/h1&gt;
+
+	&lt;p&gt;Several tutorials have been written by members of the community to help you integrate Prism into multiple different website types and configurations:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;https://websitebeaver.com/escape-html-inside-code-or-pre-tag-to-entities-to-display-raw-code-with-prismjs&quot;&gt;Escape HTML Inside &amp;lt;code&amp;gt; or &amp;lt;pre&amp;gt; Tag to Entities to Display Raw Code with PrismJS&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://crambler.com/how-to-implement-prism-js-syntax-highlighting-into-your-wordpress-site/&quot;&gt;How To Implement Prism.js Syntax Highlighting Into Your WordPress Site&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://wp.tutsplus.com/tutorials/plugins/adding-a-syntax-highlighter-shortcode-using-prism-js/&quot;&gt;Adding a Syntax Highlighter Shortcode Using Prism.js | WPTuts+&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.stramaxon.com/2012/07/prism-syntax-highlighter-for-blogger.html&quot;&gt;Implement PrismJs Syntax Highlighting to your Blogger/BlogSpot&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.allblogtools.com/tricks-and-hacks/beautify-source-codes-in-your-posts-with-prism-syntax-highlighter-for-blogger/&quot;&gt;Beautify Source Codes In Your Posts With Prism Syntax Highlighter For Blogger&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://dotnordic.se/extending-and-customizing-prism-syntax-highlighter/&quot;&gt;Extending and customizing Prism syntax highlighter&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://schier.co/blog/2013/01/07/how-to-re-run-prismjs-on-ajax-content.html&quot;&gt;How To Re-Run Prism.js On AJAX Content&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.semisedlak.com/article/highlight-your-code-syntax-with-prismjs/&quot;&gt;Highlight your code syntax with Prism.js&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://gmurphey.com/2012/08/09/jekyll-plugin-syntax-highlighting-with-prism.html&quot;&gt;Jekyll Plugin: Syntax Highlighting With Prism&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://byverdu.es/2013/06/tutorial-sobre-prism-js-inserta-ejemplos-de-codigo-en-web-wordpress-y-blogger/&quot;&gt;[Spanish] Tutorial sobre Prism.js Como utilizarlo en Web, Wordpress y Blogger&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;https://usetypo3.com/fs-code-snippet.html&quot;&gt;A code snippet content element powered by Prism.js for TYPO3 CMS&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;p&gt;Please note that the tutorials listed here are not verified to contain correct information. Read at your risk and always check the official documentation here if something doesn&rsquo;t work :)&lt;/p&gt;
+
+	&lt;p&gt;Have you written a tutorial about Prism that&rsquo;s not already included here? Send a pull request!&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;credits&quot;&gt;
+	&lt;h1&gt;Credits&lt;/h1&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Special thanks to &lt;a href=&quot;https://github.com/Golmote&quot;&gt;Golmote&lt;/a&gt; and &lt;a href=&quot;https://github.com/apfelbox&quot;&gt;Jannik Zschiesche&lt;/a&gt; for their contributions and for being &lt;strong&gt;amazing maintainers&lt;/strong&gt;. Prism would not have been able to keep up without their help.&lt;/li&gt;
+		&lt;li&gt;To &lt;a href=&quot;https://twitter.com/kizmarh&quot;&gt;Roman Komarov&lt;/a&gt; for his contributions, feedback and testing.&lt;/li&gt;
+		&lt;li&gt;To &lt;a href=&quot;https://twitter.com/zdfs&quot;&gt;Zachary Forrest&lt;/a&gt; for &lt;a href=&quot;https://twitter.com/zdfs/statuses/217834980871639041&quot;&gt;coming up with the name &ldquo;Prism&rdquo;&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;To &lt;a href=&quot;http://stellarr.deviantart.com/&quot;&gt;stellarr&lt;/a&gt; for the &lt;a href=&quot;http://stellarr.deviantart.com/art/Spectra-Wallpaper-Pack-97785901?q=gallery%3Astellarr%2F185512&amp;qo=2&quot;&gt;spectrum background&lt;/a&gt; used on this page&lt;/li&gt;
+		&lt;li&gt;To &lt;a href=&quot;https://twitter.com/thecodezombie&quot;&gt;Jason Hobbs&lt;/a&gt; for &lt;a href=&quot;https://twitter.com/thecodezombie/status/217663703825399809&quot;&gt;encouraging me&lt;/a&gt; to release this script as standalone&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;
+
+&lt;footer data-src=&quot;templates/footer.html&quot; data-type=&quot;text/html&quot;&gt;&lt;/footer&gt;
+
+&lt;script src=&quot;prism.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;utopia.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;code.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(function() {
+	var languageItems = [];
+	var languages = components.languages;
+	var count = 0;
+	for (var id in languages) {
+		if (id == 'meta') {
+			continue;
+		}
+		count++;
+		var name = languages[id].title || languages[id];
+
+		languageItems.push({
+			tag: 'li',
+			attributes: {
+				'data-id': id
+			},
+			contents: [
+				name,
+				' - ',
+				{
+					tag: 'code',
+					contents: id
+				}
+			]
+		});
+	}
+	$u.element.create('ul', {
+		contents: languageItems,
+		inside: '#languages-list'
+	});
+	$u.element.contents($('#languages-list-count'), count);
+}());
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>CSS</h2>
+
+<pre><code class="language-css">
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+
+@font-face {
+	src: url(http://lea.verou.me/logo.otf);
+	font-family: 'LeaVerou';
+}
+
+/*
+ Shared styles
+ */
+
+section h1,
+#features li strong,
+header h2,
+footer p {
+	font: 100% Rockwell, Arvo, serif;
+}
+
+/*
+ Styles
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+body {
+	font: 100%/1.5 Questrial, sans-serif;
+	tab-size: 4;
+	hyphens: auto;
+}
+
+a {
+	color: inherit;
+}
+
+section h1 {
+	font-size: 250%;
+}
+
+	section section h1 {
+		font-size: 150%;
+	}
+
+	section h1 code {
+		font-style: normal;
+	}
+
+	section h1 > a {
+		text-decoration: none;
+	}
+
+	section h1 > a:before {
+		content: '§';
+		position: absolute;
+		padding: 0 .2em;
+		margin-left: -1em;
+		border-radius: .2em;
+		color: silver;
+		text-shadow: 0 1px white;
+	}
+
+	section h1 > a:hover:before {
+		color: black;
+		background: #f1ad26;
+	}
+
+p {
+	margin: 1em 0;
+}
+
+section h1,
+h2 {
+	margin: 1em 0 .3em;
+}
+
+dt {
+	margin: 1em 0 0 0;
+	font-size: 130%;
+}
+
+	dt:after {
+		content: ':';
+	}
+
+dd {
+	margin-left: 2em;
+}
+
+strong {
+	font-weight: bold;
+}
+
+code, pre {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
+	hyphens: none;
+}
+
+pre {
+	max-height: 30em;
+	overflow: auto;
+}
+
+pre > code.highlight {
+	outline: .4em solid red;
+	outline-offset: .4em;
+}
+
+header,
+body > section {
+	display: block;
+	max-width: 900px;
+	margin: auto;
+}
+
+header, footer {
+	position: relative;
+	padding: 30px -webkit-calc(50% - 450px); /* Workaround for bug */
+	padding: 30px calc(50% - 450px);
+	color: white;
+	text-shadow: 0 -1px 2px black;
+	background: url(img/spectrum.png) fixed;
+}
+
+header:before,
+footer:before {
+	content: '';
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	height: 20px;
+	background-size: 20px 40px;
+	background-repeat: repeat-x;
+	background-image: linear-gradient(45deg, transparent 34%, white 34%, white 66%, transparent 66%),
+	                  linear-gradient(135deg, transparent 34%, white 34%, white 66%, transparent 66%);
+}
+
+header {
+
+}
+
+	header .intro,
+	html.simple header {
+		overflow: hidden;
+	}
+
+	header h1 {
+		float: left;
+		margin-right: 30px;
+		color: #7fab14;
+		text-align: center;
+		font-size: 140%;
+		text-transform: uppercase;
+		letter-spacing: .25em;
+	}
+
+	header h2 {
+		margin-top: .5em;
+		color: #f1ad26;
+	}
+
+		header h1 a {
+			text-decoration: none;
+		}
+
+		header img {
+			display: block;
+			width: 150px;
+			height: 128px;
+			margin-bottom: .3em;
+			border: 0;
+		}
+
+	header h2 {
+		font-size: 300%;
+	}
+
+	header .intro p {
+		margin: 0;
+		font: 150%/1.4 Questrial, sans-serif;
+		font-size: 150%;
+	}
+
+	#features {
+		width: 66em;
+		margin-top: 2em;
+		font-size: 80%;
+	}
+
+		#features li {
+			margin: 0 0 2em 0;
+			list-style: none;
+			display: inline-block;
+			width: 27em;
+			vertical-align: top;
+		}
+
+		#features li:nth-child(odd) {
+			margin-right: 5em;
+		}
+
+			#features li:before {
+				content: '✓';
+				float: left;
+				margin-left: -.8em;
+				color: #7fab14;
+				font-size: 400%;
+				line-height: 1;
+			}
+
+				#features li strong {
+					display: block;
+					margin-bottom: .1em;
+					font-size: 200%;
+				}
+
+	header .download-button {
+		float: right;
+		margin: 0 0 .5em .5em;
+	}
+
+	#theme {
+		position: relative;
+		z-index: 1;
+		float: right;
+		margin-right: -1em;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: .2em;
+	}
+
+		#theme > p {
+			position: absolute;
+			left: 100%;
+			transform: translateX(50%) rotate(90deg) ;
+			transform-origin: top left;
+			font-size: 130%;
+		}
+
+		#theme > label {
+			position: relative;
+			display: block;
+			width: 7em;
+			line-height: 1em;
+			padding: 3em 0;
+			border-radius: 50%;
+			background: hsla(0,0%,100%,.5);
+			cursor: pointer;
+			font-size: 110%;
+		}
+
+		#theme > label:before {
+			content: '';
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			z-index: -1;
+			border-radius: inherit;
+			background: url(img/spectrum.png) fixed;
+		}
+
+		#theme > label:nth-of-type(n+2) {
+			margin-top: -2.5em;
+		}
+
+		#theme > input:not(:checked) + label:hover {
+			background: hsla(77, 80%, 60%, .5);
+		}
+
+		#theme > input {
+			position: absolute;
+			clip: rect(0,0,0,0);
+		}
+
+		#theme > input:checked + label {
+			background: #7fab14;
+		}
+
+footer {
+	margin-top: 2em;
+	background-position: bottom;
+	color: white;
+	text-shadow: 0 -1px 2px black;
+}
+
+	footer:before {
+		bottom: auto;
+		top: 0;
+		background-position: bottom;
+	}
+
+	footer p {
+		font-size: 150%;
+	}
+
+	footer ul {
+		column-count: 3;
+	}
+
+.download-button {
+	display: block;
+	padding: .2em .8em .1em;
+	border: 1px solid rgba(0,0,0,0.5);
+	border-radius: 10px;
+	background: #39a1cf;
+	box-shadow: 0 2px 10px black,
+	   inset 0 1px hsla(0,0%,100%,.3),
+	   inset 0 .4em hsla(0,0%,100%,.2),
+	   inset 0 10px 20px hsla(0,0%,100%,.25),
+	   inset 0 -15px 30px rgba(0,0,0,0.3);
+	color: white;
+	text-shadow: 0 -1px 2px black;
+	text-align: center;
+	font-size: 250%;
+	line-height: 1.5;
+	text-transform: uppercase;
+	text-decoration: none;
+	hyphens: manual;
+}
+
+.download-button:hover {
+	background-color: #7fab14;
+}
+
+.download-button:active {
+	box-shadow: inset 0 2px 8px rgba(0,0,0,.8);
+}
+
+#toc {
+	position: fixed;
+	left: 1%;
+	max-width: calc(48% - 450px);
+	font-size: 80%;
+	opacity: .3;
+}
+
+@media (max-width: 1200px) {
+	#toc {
+		 display: none;
+	}
+}
+
+#toc:hover {
+	opacity: 1;
+}
+
+	#toc h1 {
+		font-size: 180%;
+	}
+
+	#toc li {
+		list-style: none;
+	}
+
+#logo:before {
+	content: '☠';
+	float: right;
+	font: 100px/1.6 LeaVerou;
+}
+
+.used-by-logos {
+	overflow: hidden;
+}
+	.used-by-logos > a {
+		float: left;
+		width: 33.33%;
+		height: 100px;
+		text-align: center;
+		background: #F5F2F0;
+		box-sizing: border-box;
+		border: 5px solid white;
+		position: relative;
+	}
+		.used-by-logos > .uswds {
+			background: url('img/screen-us-web-design-standards.png') no-repeat 0 0;
+			background-size: cover;
+			text-indent: -999em;
+		}
+		.used-by-logos > a > img {
+			max-height: 100%;
+			max-width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+label a.owner {
+	margin: 0 .5em;
+}
+
+label a.owner:not(:hover) {
+	text-decoration: none;
+	color: #aaa;
+}
+
+#languages-list ul {
+	column-count: 3;
+}
+	#languages-list li {
+		padding: .2em;
+	}
+	#languages-list li[data-id="javascript"] {
+		border-bottom: 1px solid #aaa;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+		margin-right: 1em;
+	}
+</code></pre>
+
+<h2>JavaScript</h2>
+
+<pre><code class="language-javascript">/* **********************************************
+     Begin prism-core.js
+********************************************** */
+
+var _self = (typeof window !== 'undefined')
+	? window   // if in browser
+	: (
+		(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
+		? self // if in worker
+		: {}   // if in node js
+	);
+
+/**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ * MIT license http://www.opensource.org/licenses/mit-license.php/
+ * @author Lea Verou http://lea.verou.me
+ */
+
+var Prism = (function(){
+
+// Private helper vars
+var lang = /\blang(?:uage)?-(\w+)\b/i;
+var uniqueId = 0;
+
+var _ = _self.Prism = {
+	manual: _self.Prism && _self.Prism.manual,
+	disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
+	util: {
+		encode: function (tokens) {
+			if (tokens instanceof Token) {
+				return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
+			} else if (_.util.type(tokens) === 'Array') {
+				return tokens.map(_.util.encode);
+			} else {
+				return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
+			}
+		},
+
+		type: function (o) {
+			return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
+		},
+
+		objId: function (obj) {
+			if (!obj['__id']) {
+				Object.defineProperty(obj, '__id', { value: ++uniqueId });
+			}
+			return obj['__id'];
+		},
+
+		// Deep clone a language definition (e.g. to extend it)
+		clone: function (o) {
+			var type = _.util.type(o);
+
+			switch (type) {
+				case 'Object':
+					var clone = {};
+
+					for (var key in o) {
+						if (o.hasOwnProperty(key)) {
+							clone[key] = _.util.clone(o[key]);
+						}
+					}
+
+					return clone;
+
+				case 'Array':
+					return o.map(function(v) { return _.util.clone(v); });
+			}
+
+			return o;
+		}
+	},
+
+	languages: {
+		extend: function (id, redef) {
+			var lang = _.util.clone(_.languages[id]);
+
+			for (var key in redef) {
+				lang[key] = redef[key];
+			}
+
+			return lang;
+		},
+
+		/**
+		 * Insert a token before another token in a language literal
+		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
+		 * we cannot just provide an object, we need anobject and a key.
+		 * @param inside The key (or language id) of the parent
+		 * @param before The key to insert before. If not provided, the function appends instead.
+		 * @param insert Object with the key/value pairs to insert
+		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
+		 */
+		insertBefore: function (inside, before, insert, root) {
+			root = root || _.languages;
+			var grammar = root[inside];
+
+			if (arguments.length == 2) {
+				insert = arguments[1];
+
+				for (var newToken in insert) {
+					if (insert.hasOwnProperty(newToken)) {
+						grammar[newToken] = insert[newToken];
+					}
+				}
+
+				return grammar;
+			}
+
+			var ret = {};
+
+			for (var token in grammar) {
+
+				if (grammar.hasOwnProperty(token)) {
+
+					if (token == before) {
+
+						for (var newToken in insert) {
+
+							if (insert.hasOwnProperty(newToken)) {
+								ret[newToken] = insert[newToken];
+							}
+						}
+					}
+
+					ret[token] = grammar[token];
+				}
+			}
+
+			// Update references in other language definitions
+			_.languages.DFS(_.languages, function(key, value) {
+				if (value === root[inside] && key != inside) {
+					this[key] = ret;
+				}
+			});
+
+			return root[inside] = ret;
+		},
+
+		// Traverse a language definition with Depth First Search
+		DFS: function(o, callback, type, visited) {
+			visited = visited || {};
+			for (var i in o) {
+				if (o.hasOwnProperty(i)) {
+					callback.call(o, i, o[i], type || i);
+
+					if (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(o[i])]) {
+						visited[_.util.objId(o[i])] = true;
+						_.languages.DFS(o[i], callback, null, visited);
+					}
+					else if (_.util.type(o[i]) === 'Array' && !visited[_.util.objId(o[i])]) {
+						visited[_.util.objId(o[i])] = true;
+						_.languages.DFS(o[i], callback, i, visited);
+					}
+				}
+			}
+		}
+	},
+	plugins: {},
+
+	highlightAll: function(async, callback) {
+		_.highlightAllUnder(document, async, callback);
+	},
+
+	highlightAllUnder: function(container, async, callback) {
+		var env = {
+			callback: callback,
+			selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
+		};
+
+		_.hooks.run("before-highlightall", env);
+
+		var elements = env.elements || container.querySelectorAll(env.selector);
+
+		for (var i=0, element; element = elements[i++];) {
+			_.highlightElement(element, async === true, env.callback);
+		}
+	},
+
+	highlightElement: function(element, async, callback) {
+		// Find language
+		var language, grammar, parent = element;
+
+		while (parent && !lang.test(parent.className)) {
+			parent = parent.parentNode;
+		}
+
+		if (parent) {
+			language = (parent.className.match(lang) || [,''])[1].toLowerCase();
+			grammar = _.languages[language];
+		}
+
+		// Set language on the element, if not present
+		element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+
+		if (element.parentNode) {
+			// Set language on the parent, for styling
+			parent = element.parentNode;
+
+			if (/pre/i.test(parent.nodeName)) {
+				parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+			}
+		}
+
+		var code = element.textContent;
+
+		var env = {
+			element: element,
+			language: language,
+			grammar: grammar,
+			code: code
+		};
+
+		_.hooks.run('before-sanity-check', env);
+
+		if (!env.code || !env.grammar) {
+			if (env.code) {
+				_.hooks.run('before-highlight', env);
+				env.element.textContent = env.code;
+				_.hooks.run('after-highlight', env);
+			}
+			_.hooks.run('complete', env);
+			return;
+		}
+
+		_.hooks.run('before-highlight', env);
+
+		if (async && _self.Worker) {
+			var worker = new Worker(_.filename);
+
+			worker.onmessage = function(evt) {
+				env.highlightedCode = evt.data;
+
+				_.hooks.run('before-insert', env);
+
+				env.element.innerHTML = env.highlightedCode;
+
+				callback && callback.call(env.element);
+				_.hooks.run('after-highlight', env);
+				_.hooks.run('complete', env);
+			};
+
+			worker.postMessage(JSON.stringify({
+				language: env.language,
+				code: env.code,
+				immediateClose: true
+			}));
+		}
+		else {
+			env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
+
+			_.hooks.run('before-insert', env);
+
+			env.element.innerHTML = env.highlightedCode;
+
+			callback && callback.call(element);
+
+			_.hooks.run('after-highlight', env);
+			_.hooks.run('complete', env);
+		}
+	},
+
+	highlight: function (text, grammar, language) {
+		var tokens = _.tokenize(text, grammar);
+		return Token.stringify(_.util.encode(tokens), language);
+	},
+
+	matchGrammar: function (text, strarr, grammar, index, startPos, oneshot, target) {
+		var Token = _.Token;
+
+		for (var token in grammar) {
+			if(!grammar.hasOwnProperty(token) || !grammar[token]) {
+				continue;
+			}
+
+			if (token == target) {
+				return;
+			}
+
+			var patterns = grammar[token];
+			patterns = (_.util.type(patterns) === "Array") ? patterns : [patterns];
+
+			for (var j = 0; j < patterns.length; ++j) {
+				var pattern = patterns[j],
+					inside = pattern.inside,
+					lookbehind = !!pattern.lookbehind,
+					greedy = !!pattern.greedy,
+					lookbehindLength = 0,
+					alias = pattern.alias;
+
+				if (greedy && !pattern.pattern.global) {
+					// Without the global flag, lastIndex won't work
+					var flags = pattern.pattern.toString().match(/[imuy]*$/)[0];
+					pattern.pattern = RegExp(pattern.pattern.source, flags + "g");
+				}
+
+				pattern = pattern.pattern || pattern;
+
+				// Don’t cache length as it changes during the loop
+				for (var i = index, pos = startPos; i < strarr.length; pos += strarr[i].length, ++i) {
+
+					var str = strarr[i];
+
+					if (strarr.length > text.length) {
+						// Something went terribly wrong, ABORT, ABORT!
+						return;
+					}
+
+					if (str instanceof Token) {
+						continue;
+					}
+
+					pattern.lastIndex = 0;
+
+					var match = pattern.exec(str),
+					    delNum = 1;
+
+					// Greedy patterns can override/remove up to two previously matched tokens
+					if (!match && greedy && i != strarr.length - 1) {
+						pattern.lastIndex = pos;
+						match = pattern.exec(text);
+						if (!match) {
+							break;
+						}
+
+						var from = match.index + (lookbehind ? match[1].length : 0),
+						    to = match.index + match[0].length,
+						    k = i,
+						    p = pos;
+
+						for (var len = strarr.length; k < len && (p < to || (!strarr[k].type && !strarr[k - 1].greedy)); ++k) {
+							p += strarr[k].length;
+							// Move the index i to the element in strarr that is closest to from
+							if (from >= p) {
+								++i;
+								pos = p;
+							}
+						}
+
+						/*
+						 * If strarr[i] is a Token, then the match starts inside another Token, which is invalid
+						 * If strarr[k - 1] is greedy we are in conflict with another greedy pattern
+						 */
+						if (strarr[i] instanceof Token || strarr[k - 1].greedy) {
+							continue;
+						}
+
+						// Number of tokens to delete and replace with the new match
+						delNum = k - i;
+						str = text.slice(pos, p);
+						match.index -= pos;
+					}
+
+					if (!match) {
+						if (oneshot) {
+							break;
+						}
+
+						continue;
+					}
+
+					if(lookbehind) {
+						lookbehindLength = match[1].length;
+					}
+
+					var from = match.index + lookbehindLength,
+					    match = match[0].slice(lookbehindLength),
+					    to = from + match.length,
+					    before = str.slice(0, from),
+					    after = str.slice(to);
+
+					var args = [i, delNum];
+
+					if (before) {
+						++i;
+						pos += before.length;
+						args.push(before);
+					}
+
+					var wrapped = new Token(token, inside? _.tokenize(match, inside) : match, alias, match, greedy);
+
+					args.push(wrapped);
+
+					if (after) {
+						args.push(after);
+					}
+
+					Array.prototype.splice.apply(strarr, args);
+
+					if (delNum != 1)
+						_.matchGrammar(text, strarr, grammar, i, pos, true, token);
+
+					if (oneshot)
+						break;
+				}
+			}
+		}
+	},
+
+	tokenize: function(text, grammar, language) {
+		var strarr = [text];
+
+		var rest = grammar.rest;
+
+		if (rest) {
+			for (var token in rest) {
+				grammar[token] = rest[token];
+			}
+
+			delete grammar.rest;
+		}
+
+		_.matchGrammar(text, strarr, grammar, 0, 0, false);
+
+		return strarr;
+	},
+
+	hooks: {
+		all: {},
+
+		add: function (name, callback) {
+			var hooks = _.hooks.all;
+
+			hooks[name] = hooks[name] || [];
+
+			hooks[name].push(callback);
+		},
+
+		run: function (name, env) {
+			var callbacks = _.hooks.all[name];
+
+			if (!callbacks || !callbacks.length) {
+				return;
+			}
+
+			for (var i=0, callback; callback = callbacks[i++];) {
+				callback(env);
+			}
+		}
+	}
+};
+
+var Token = _.Token = function(type, content, alias, matchedStr, greedy) {
+	this.type = type;
+	this.content = content;
+	this.alias = alias;
+	// Copy of the full string this token was created from
+	this.length = (matchedStr || "").length|0;
+	this.greedy = !!greedy;
+};
+
+Token.stringify = function(o, language, parent) {
+	if (typeof o == 'string') {
+		return o;
+	}
+
+	if (_.util.type(o) === 'Array') {
+		return o.map(function(element) {
+			return Token.stringify(element, language, o);
+		}).join('');
+	}
+
+	var env = {
+		type: o.type,
+		content: Token.stringify(o.content, language, parent),
+		tag: 'span',
+		classes: ['token', o.type],
+		attributes: {},
+		language: language,
+		parent: parent
+	};
+
+	if (o.alias) {
+		var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
+		Array.prototype.push.apply(env.classes, aliases);
+	}
+
+	_.hooks.run('wrap', env);
+
+	var attributes = Object.keys(env.attributes).map(function(name) {
+		return name + '="' + (env.attributes[name] || '').replace(/"/g, '&quot;') + '"';
+	}).join(' ');
+
+	return '<' + env.tag + ' class="' + env.classes.join(' ') + '"' + (attributes ? ' ' + attributes : '') + '>' + env.content + '</' + env.tag + '>';
+
+};
+
+if (!_self.document) {
+	if (!_self.addEventListener) {
+		// in Node.js
+		return _self.Prism;
+	}
+
+	if (!_.disableWorkerMessageHandler) {
+		// In worker
+		_self.addEventListener('message', function (evt) {
+			var message = JSON.parse(evt.data),
+				lang = message.language,
+				code = message.code,
+				immediateClose = message.immediateClose;
+
+			_self.postMessage(_.highlight(code, _.languages[lang], lang));
+			if (immediateClose) {
+				_self.close();
+			}
+		}, false);
+	}
+
+	return _self.Prism;
+}
+
+//Get current script and highlight
+var script = document.currentScript || [].slice.call(document.getElementsByTagName("script")).pop();
+
+if (script) {
+	_.filename = script.src;
+
+	if (!_.manual && !script.hasAttribute('data-manual')) {
+		if(document.readyState !== "loading") {
+			if (window.requestAnimationFrame) {
+				window.requestAnimationFrame(_.highlightAll);
+			} else {
+				window.setTimeout(_.highlightAll, 16);
+			}
+		}
+		else {
+			document.addEventListener('DOMContentLoaded', _.highlightAll);
+		}
+	}
+}
+
+return _self.Prism;
+
+})();
+
+if (typeof module !== 'undefined' && module.exports) {
+	module.exports = Prism;
+}
+
+// hack for components to work correctly in node.js
+if (typeof global !== 'undefined') {
+	global.Prism = Prism;
+}
+
+
+/* **********************************************
+     Begin prism-markup.js
+********************************************** */
+
+Prism.languages.markup = {
+	'comment': /<!--[\s\S]*?-->/,
+	'prolog': /<\?[\s\S]+?\?>/,
+	'doctype': /<!DOCTYPE[\s\S]+?>/i,
+	'cdata': /<!\[CDATA\[[\s\S]*?]]>/i,
+	'tag': {
+		pattern: /<\/?(?!\d)[^\s>\/=$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i,
+		inside: {
+			'tag': {
+				pattern: /^<\/?[^\s>\/]+/i,
+				inside: {
+					'punctuation': /^<\/?/,
+					'namespace': /^[^\s>\/:]+:/
+				}
+			},
+			'attr-value': {
+				pattern: /=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+)/i,
+				inside: {
+					'punctuation': [
+						/^=/,
+						{
+							pattern: /(^|[^\\])["']/,
+							lookbehind: true
+						}
+					]
+				}
+			},
+			'punctuation': /\/?>/,
+			'attr-name': {
+				pattern: /[^\s>\/]+/,
+				inside: {
+					'namespace': /^[^\s>\/:]+:/
+				}
+			}
+
+		}
+	},
+	'entity': /&#?[\da-z]{1,8};/i
+};
+
+Prism.languages.markup['tag'].inside['attr-value'].inside['entity'] =
+	Prism.languages.markup['entity'];
+
+// Plugin to make entity title show the real entity, idea by Roman Komarov
+Prism.hooks.add('wrap', function(env) {
+
+	if (env.type === 'entity') {
+		env.attributes['title'] = env.content.replace(/&amp;/, '&');
+	}
+});
+
+Prism.languages.xml = Prism.languages.markup;
+Prism.languages.html = Prism.languages.markup;
+Prism.languages.mathml = Prism.languages.markup;
+Prism.languages.svg = Prism.languages.markup;
+
+
+/* **********************************************
+     Begin prism-css.js
+********************************************** */
+
+Prism.languages.css = {
+	'comment': /\/\*[\s\S]*?\*\//,
+	'atrule': {
+		pattern: /@[\w-]+?.*?(?:;|(?=\s*\{))/i,
+		inside: {
+			'rule': /@[\w-]+/
+			// See rest below
+		}
+	},
+	'url': /url\((?:(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
+	'selector': /[^{}\s][^{};]*?(?=\s*\{)/,
+	'string': {
+		pattern: /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+		greedy: true
+	},
+	'property': /[-_a-z\xA0-\uFFFF][-\w\xA0-\uFFFF]*(?=\s*:)/i,
+	'important': /\B!important\b/i,
+	'function': /[-a-z0-9]+(?=\()/i,
+	'punctuation': /[(){};:]/
+};
+
+Prism.languages.css['atrule'].inside.rest = Prism.util.clone(Prism.languages.css);
+
+if (Prism.languages.markup) {
+	Prism.languages.insertBefore('markup', 'tag', {
+		'style': {
+			pattern: /(<style[\s\S]*?>)[\s\S]*?(?=<\/style>)/i,
+			lookbehind: true,
+			inside: Prism.languages.css,
+			alias: 'language-css',
+			greedy: true
+		}
+	});
+
+	Prism.languages.insertBefore('inside', 'attr-value', {
+		'style-attr': {
+			pattern: /\s*style=("|')(?:\\[\s\S]|(?!\1)[^\\])*\1/i,
+			inside: {
+				'attr-name': {
+					pattern: /^\s*style/i,
+					inside: Prism.languages.markup.tag.inside
+				},
+				'punctuation': /^\s*=\s*['"]|['"]\s*$/,
+				'attr-value': {
+					pattern: /.+/i,
+					inside: Prism.languages.css
+				}
+			},
+			alias: 'language-css'
+		}
+	}, Prism.languages.markup.tag);
+}
+
+/* **********************************************
+     Begin prism-clike.js
+********************************************** */
+
+Prism.languages.clike = {
+	'comment': [
+		{
+			pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
+			lookbehind: true
+		},
+		{
+			pattern: /(^|[^\\:])\/\/.*/,
+			lookbehind: true
+		}
+	],
+	'string': {
+		pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+		greedy: true
+	},
+	'class-name': {
+		pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[\w.\\]+/i,
+		lookbehind: true,
+		inside: {
+			punctuation: /[.\\]/
+		}
+	},
+	'keyword': /\b(?:if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+	'boolean': /\b(?:true|false)\b/,
+	'function': /[a-z0-9_]+(?=\()/i,
+	'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
+	'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
+	'punctuation': /[{}[\];(),.:]/
+};
+
+
+/* **********************************************
+     Begin prism-javascript.js
+********************************************** */
+
+Prism.languages.javascript = Prism.languages.extend('clike', {
+	'keyword': /\b(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,
+	'number': /\b-?(?:0[xX][\dA-Fa-f]+|0[bB][01]+|0[oO][0-7]+|\d*\.?\d+(?:[Ee][+-]?\d+)?|NaN|Infinity)\b/,
+	// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
+	'function': /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*\()/i,
+	'operator': /-[-=]?|\+[+=]?|!=?=?|<<?=?|>>?>?=?|=(?:==?|>)?|&[&=]?|\|[|=]?|\*\*?=?|\/=?|~|\^=?|%=?|\?|\.{3}/
+});
+
+Prism.languages.insertBefore('javascript', 'keyword', {
+	'regex': {
+		pattern: /(^|[^/])\/(?!\/)(\[[^\]\r\n]+]|\\.|[^/\\\[\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,
+		lookbehind: true,
+		greedy: true
+	},
+	// This must be declared before keyword because we use "function" inside the look-forward
+	'function-variable': {
+		pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*=\s*(?:function\b|(?:\([^()]*\)|[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)\s*=>))/i,
+		alias: 'function'
+	}
+});
+
+Prism.languages.insertBefore('javascript', 'string', {
+	'template-string': {
+		pattern: /`(?:\\[\s\S]|[^\\`])*`/,
+		greedy: true,
+		inside: {
+			'interpolation': {
+				pattern: /\$\{[^}]+\}/,
+				inside: {
+					'interpolation-punctuation': {
+						pattern: /^\$\{|\}$/,
+						alias: 'punctuation'
+					},
+					rest: Prism.languages.javascript
+				}
+			},
+			'string': /[\s\S]+/
+		}
+	}
+});
+
+if (Prism.languages.markup) {
+	Prism.languages.insertBefore('markup', 'tag', {
+		'script': {
+			pattern: /(<script[\s\S]*?>)[\s\S]*?(?=<\/script>)/i,
+			lookbehind: true,
+			inside: Prism.languages.javascript,
+			alias: 'language-javascript',
+			greedy: true
+		}
+	});
+}
+
+Prism.languages.js = Prism.languages.javascript;
+
+
+/* **********************************************
+     Begin prism-file-highlight.js
+********************************************** */
+
+(function () {
+	if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
+		return;
+	}
+
+	self.Prism.fileHighlight = function() {
+
+		var Extensions = {
+			'js': 'javascript',
+			'py': 'python',
+			'rb': 'ruby',
+			'ps1': 'powershell',
+			'psm1': 'powershell',
+			'sh': 'bash',
+			'bat': 'batch',
+			'h': 'c',
+			'tex': 'latex'
+		};
+
+		Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+			var src = pre.getAttribute('data-src');
+
+			var language, parent = pre;
+			var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
+			while (parent && !lang.test(parent.className)) {
+				parent = parent.parentNode;
+			}
+
+			if (parent) {
+				language = (pre.className.match(lang) || [, ''])[1];
+			}
+
+			if (!language) {
+				var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+				language = Extensions[extension] || extension;
+			}
+
+			var code = document.createElement('code');
+			code.className = 'language-' + language;
+
+			pre.textContent = '';
+
+			code.textContent = 'Loading…';
+
+			pre.appendChild(code);
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.open('GET', src, true);
+
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4) {
+
+					if (xhr.status < 400 && xhr.responseText) {
+						code.textContent = xhr.responseText;
+
+						Prism.highlightElement(code);
+					}
+					else if (xhr.status >= 400) {
+						code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+					}
+					else {
+						code.textContent = '✖ Error: File does not exist or is empty';
+					}
+				}
+			};
+
+			xhr.send(null);
+		});
+
+	};
+
+	document.addEventListener('DOMContentLoaded', self.Prism.fileHighlight);
+
+})();
+</code></pre>
+
+</body>
+</html>
