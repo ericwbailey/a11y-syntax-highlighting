@@ -6,12 +6,10 @@
 MARK: Setup
 */
 @layer highlight {
-  :root {
-    --highlight-a11y-code-block-padding: 0.5em;
-  }
-
-  @media (forced-colors: none) and (prefers-color-scheme: light) {
+  @media (forced-colors: none) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
     :root {
+      --highlight-a11y-code-block-padding: 0.5em;
+
       --highlight-a11y-color-background: hsla(0, 0%, 17%, 1);
       --highlight-a11y-color-text-no-token: hsla(60, 30%, 96%, 1);
       --highlight-a11y-color-text-comment: hsla(54, 32%, 75%, 1);
@@ -26,98 +24,101 @@ MARK: Setup
     }
   }
 
-  /*
-  MARK: Theme
-  */
-  /* Comment */
+
+  @media (forced-colors: none) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+    /*
+    MARK: Theme
+    */
+    /* Comment */
+    :where(
+      .hljs-comment,
+      .hljs-quote
+    ) {
+      color: var(--highlight-a11y-color-text-comment);
+    }
+
+  /* Red */
   :where(
-    .hljs-comment,
-    .hljs-quote
-  ) {
-    color: var(--highlight-a11y-color-text-comment);
-  }
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-tag,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-regexp,
+    .hljs-deletion
+    ) {
+      color: var(--highlight-a11y-color-text-red);
+    }
 
-/* Red */
-:where(
-  .hljs-variable,
-  .hljs-template-variable,
-  .hljs-tag,
-  .hljs-name,
-  .hljs-selector-id,
-  .hljs-selector-class,
-  .hljs-regexp,
-  .hljs-deletion
-  ) {
-    color: var(--highlight-a11y-color-text-red);
-  }
+  /* Orange */
+  :where(
+    .hljs-number,
+    .hljs-built_in,
+    .hljs-builtin-name,
+    .hljs-literal,
+    .hljs-type,
+    .hljs-params,
+    .hljs-meta,
+    .hljs-link
+    ) {
+      color: var(--highlight-a11y-color-text-orange);
+    }
 
-/* Orange */
-:where(
-  .hljs-number,
-  .hljs-built_in,
-  .hljs-builtin-name,
-  .hljs-literal,
-  .hljs-type,
-  .hljs-params,
-  .hljs-meta,
-  .hljs-link
-  ) {
-    color: var(--highlight-a11y-color-text-orange);
-  }
+    /* Yellow */
+    :where( 
+      .hljs-attribute 
+    ) {
+      color: var(--highlight-a11y-color-text-yellow);
+    }
 
-  /* Yellow */
-  :where( 
-    .hljs-attribute 
-  ) {
-    color: var(--highlight-a11y-color-text-yellow);
-  }
+    /* Green */
+    :where( 
+      .hljs-string,
+      .hljs-symbol,
+      .hljs-bullet,
+      .hljs-addition 
+    ) {
+      color: var(--highlight-a11y-color-text-green);
+    }
 
-  /* Green */
-  :where( 
-    .hljs-string,
-    .hljs-symbol,
-    .hljs-bullet,
-    .hljs-addition 
-  ) {
-    color: var(--highlight-a11y-color-text-green);
-  }
+    /* Blue */
+    :where( 
+    .hljs-title,
+    .hljs-section 
+    ) {
+      color: var(--highlight-a11y-color-text-blue);
+    }
 
-  /* Blue */
-  :where( 
-  .hljs-title,
-  .hljs-section 
-  ) {
-    color: var(--highlight-a11y-color-text-blue);
-  }
+    /* Purple */
+    :where( 
+      .hljs-keyword,
+      .hljs-selector-tag 
+    ) {
+      color: var(--highlight-a11y-color-text-purple);
+    }
 
-  /* Purple */
-  :where( 
-    .hljs-keyword,
-    .hljs-selector-tag 
-  ) {
-    color: var(--highlight-a11y-color-text-purple);
-  }
+    :where( 
+      .hljs
+    ) {
+      display: block;
+      overflow-x: auto;
+      background: var(--highlight-a11y-color-background);
+      color: var(--highlight-a11y-color-text-no-token);
+      padding: var(--highlight-a11y-code-block-padding);
+    }
 
-  :where( 
-    .hljs
-   ) {
-    display: block;
-    overflow-x: auto;
-    background: var(--highlight-a11y-color-background);
-    color: var(--highlight-a11y-color-text-no-token);
-    padding: var(--highlight-a11y-code-block-padding);
-  }
+    :where( 
+      .hljs-emphasis 
+    ) {
+      font-style: italic;
+    }
 
-  :where( 
-    .hljs-emphasis 
-  ) {
-    font-style: italic;
-  }
-
-  :where( 
-    .hljs-strong 
-  ) {
-    font-weight: bold;
+    :where( 
+      .hljs-strong 
+    ) {
+      font-weight: bold;
+    }
   }
 
 
