@@ -5,10 +5,10 @@
  */
 
 /*
- MARK: Setup
-*/
-@layer prism {
-  @media (forced-colors: none) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+ * MARK: Setup
+ */
+@layer vendor-prism {
+  @media (forced-colors: none), (forced-colors: active) {
     :root {
       --prism-a11y-border-radius: 0.3em;
       --prism-a11y-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -18,7 +18,11 @@
       --prism-a11y-code-inline-padding: 0.1em;
       --prism-a11y-width-border: 1px;
       --prism-a11y-width-tab: 2;
+    }
+  }
 
+  @media (forced-colors: none), (forced-colors: active) {
+    :root {
       --prism-a11y-color-background: hsla(0, 0%, 17%, 1);
       --prism-a11y-color-text-no-token: hsla(60, 30%, 96%, 1);
       --prism-a11y-color-text-comment: hsla(54, 32%, 75%, 1);
@@ -34,10 +38,10 @@
   }
 
 
-  @media (forced-colors: none) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+  @media (forced-colors: none), (forced-colors: active) {
     /*
-    MARK: Theme
-    */
+     * MARK: Theme
+     */
     :where(
       code[class*="language-"],
       pre[class*="language-"]
@@ -165,9 +169,8 @@
 
 
     /*
-    MARK: Plugin support
-    */
-
+     * MARK: Plugin support
+     */
     /* Line highlight */
     .line-highlight {
       background: var(--prism-a11y-plugin-color-background);
@@ -187,9 +190,9 @@
 
 
   /*
-  MARK: Forced color mode support
-  */
-  @media (forced-colors: active) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+   * MARK: Forced color mode support
+   */
+  @media (forced-colors: active) {
     :root {
       --prism-a11y-color-background: Canvas;
       --prism-a11y-color-text-no-token: CanvasText;

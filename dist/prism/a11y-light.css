@@ -5,10 +5,10 @@
  */
 
 /*
- MARK: Setup
-*/
-@layer prism {
-  @media (forced-colors: none) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+ * MARK: Setup
+ */
+@layer vendor-prism {
+  @media (forced-colors: none), (forced-colors: active) {
     :root {
       --prism-a11y-border-radius: 0.3em;
       --prism-a11y-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -18,7 +18,11 @@
       --prism-a11y-code-inline-padding: 0.1em;
       --prism-a11y-width-border: 1px;
       --prism-a11y-width-tab: 2;
+    }
+  }
 
+  @media (forced-colors: none), (forced-colors: active) {
+    :root {
       --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
       --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
       --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
@@ -34,10 +38,10 @@
   }
 
 
-  @media (forced-colors: none) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+  @media (forced-colors: none), (forced-colors: active) {
     /*
-    MARK: Theme
-    */
+     * MARK: Theme
+     */
     :where(
       code[class*="language-"],
       pre[class*="language-"]
@@ -165,9 +169,8 @@
 
 
     /*
-    MARK: Plugin support
-    */
-
+     * MARK: Plugin support
+     */
     /* Line highlight */
     .line-highlight {
       background: var(--prism-a11y-plugin-color-background);
@@ -187,31 +190,29 @@
 
 
   /*
-  MARK: Forced color mode support
-  */
-  @media (forced-colors: active) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
-    @layer syntax {
-      :root {
-        --prism-a11y-color-background: Canvas;
-        --prism-a11y-color-text-no-token: CanvasText;
-        --prism-a11y-color-text-comment: GrayText;
-        --prism-a11y-color-text-blue: LinkText;
-        --prism-a11y-color-text-gray: LinkText;
-        --prism-a11y-color-text-green: CanvasText;
-        --prism-a11y-color-text-purple: CanvasText;
-        --prism-a11y-color-text-red: CanvasText;
-        --prism-a11y-color-text-yellow: GrayText;
-        --prism-a11y-plugin-color-border: LinkText;
-        --prism-a11y-plugin-color-background: Canvas;
-      }
+   * MARK: Forced color mode support
+   */
+  @media (forced-colors: active) {
+    :root {
+      --prism-a11y-color-background: Canvas;
+      --prism-a11y-color-text-no-token: CanvasText;
+      --prism-a11y-color-text-comment: GrayText;
+      --prism-a11y-color-text-blue: LinkText;
+      --prism-a11y-color-text-gray: LinkText;
+      --prism-a11y-color-text-green: CanvasText;
+      --prism-a11y-color-text-purple: CanvasText;
+      --prism-a11y-color-text-red: CanvasText;
+      --prism-a11y-color-text-yellow: GrayText;
+      --prism-a11y-plugin-color-border: LinkText;
+      --prism-a11y-plugin-color-background: Canvas;
+    }
 
-      :where(
-        .token.boolean,
-        .token.number,
-        .token.keyword
-      ) {
-        font-weight: bold;
-      }
+    :where(
+      .token.boolean,
+      .token.number,
+      .token.keyword
+    ) {
+      font-weight: bold;
     }
   }
 }
