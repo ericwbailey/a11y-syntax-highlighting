@@ -3,8 +3,8 @@
 /* @author: ericwbailey */
 
 /*
-MARK: Setup
-*/
+ * MARK: Setup
+ */
 @layer vendor-highlight {
   @media (forced-colors: none), (forced-colors: active) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
     :root {
@@ -43,8 +43,8 @@ MARK: Setup
 
   @media (forced-colors: none), (forced-colors: active) and (prefers-color-scheme: light), (prefers-color-scheme: dark) {
     /*
-    MARK: Theme
-    */
+     * MARK: Theme
+     */
     /* Comment */
     :where(
       .hljs-comment,
@@ -139,8 +139,8 @@ MARK: Setup
 
 
   /*
-    MARK: Forced color mode support
-  */
+   * MARK: Forced color mode support
+   */
   @media (forced-colors: active) {
     :root {
       --highlight-a11y-color-background: Canvas;
