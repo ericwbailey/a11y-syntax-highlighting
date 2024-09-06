@@ -126,7 +126,7 @@ Naming things is hard. I had to redo them to have better control between light a
 
 ### Something strange is going on with inheriteance, can you help?
 
-Check your Cascade Layer order. These themes use the `prism` and `highlight` namespaces, respectively.
+Check your Cascade Layer order. These themes use the `vendor-prism` and `vendor-highlight` namespaces, respectively.
 
 ### Will you consider supporting this service I use?
 
