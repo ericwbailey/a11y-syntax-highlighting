@@ -82,7 +82,7 @@ Other [services are also supported](#supported).
 
 Both themes have enhanced support for [Windows High Contrast Mode](https://support.microsoft.com/en-us/windows/change-color-contrast-in-windows-fedc744c-90ac-69df-aed5-c8a90125e696) when possible:
 
-![The a11y-dark theme responding to Windows High Contrast Mode. Screenshot.](https://raw.githubusercontent.com/ericwbailey/a11y-prism-theme/master/images/a11y-high-contrast-mode.png)
+![The a11y-dark theme responding to Windows High Contrast Mode. Screenshot.](https://raw.githubusercontent.com/ericwbailey/a11y-prism-theme/master/images/a11y-forced-colors.png)
 
 
 ## FAQ
@@ -123,6 +123,10 @@ Naming things is hard. I had to redo them to have better control between light a
 `forced-colors` is a cross-browser standard derived from the propritary `-ms-high-contrast` declaraction. It has a slightly different syntax, but will also honor legacy `-ms-high-contrast` code.
 
 `-ms-high-contrast` <strong>will not</strong> honor `forced-colors` code. The situation is a bit of a mess, honestly. You can read more about [the difference between Windows High Contrast Mode and cross-browser Forced Colors mode in this Smashing Magazine article](https://www.smashingmagazine.com/2022/03/windows-high-contrast-colors-mode-css-custom-properties/#high-contrast-mode-forced-colors-mode-and-browser-support).
+
+### I noticed that the colors in the Forced Color Mode screenshot don't all look like they have high enough contrast?
+
+This is by design. These colors are dynamic, and can be adjusted by the person using the theme to make the experience work for their vision needs.
 
 ### Something strange is going on with inheriteance, can you help?
 
