@@ -23,22 +23,6 @@
 
   @media (forced-colors: none) and (prefers-color-scheme: light) {
     :root {
-      --prism-a11y-color-background: hsla(0, 0%, 17%, 1);
-      --prism-a11y-color-text-no-token: hsla(60, 30%, 96%, 1);
-      --prism-a11y-color-text-comment: hsla(54, 32%, 75%, 1);
-      --prism-a11y-color-text-blue: hsla(180, 100%, 44%, 1);
-      --prism-a11y-color-text-green: hsla(80, 75%, 55%, 1);
-      --prism-a11y-color-text-gray: hsla(60, 30%, 96%, 1);
-      --prism-a11y-color-text-purple: hsla(291, 30%, 83%, 1);
-      --prism-a11y-color-text-red: hsla(17, 100%, 74%, 1);
-      --prism-a11y-color-text-yellow: hsla(51, 100%, 50%, 1);
-      --prism-a11y-plugin-color-border: hsla(51, 100%, 50%, 0.55);
-      --prism-a11y-plugin-color-background: hsla(51, 100%, 50%, 0.1);
-    }
-  }
-
-  @media (forced-colors: none) and (prefers-color-scheme: dark) {
-    :root {
       --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
       --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
       --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
@@ -50,6 +34,22 @@
       --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
       --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
       --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+    }
+  }
+
+  @media (forced-colors: none) and (prefers-color-scheme: dark) {
+    :root {
+      --prism-a11y-color-background: hsla(0, 0%, 17%, 1);
+      --prism-a11y-color-text-no-token: hsla(60, 30%, 96%, 1);
+      --prism-a11y-color-text-comment: hsla(54, 32%, 75%, 1);
+      --prism-a11y-color-text-blue: hsla(180, 100%, 44%, 1);
+      --prism-a11y-color-text-green: hsla(80, 75%, 55%, 1);
+      --prism-a11y-color-text-gray: hsla(60, 30%, 96%, 1);
+      --prism-a11y-color-text-purple: hsla(291, 30%, 83%, 1);
+      --prism-a11y-color-text-red: hsla(17, 100%, 74%, 1);
+      --prism-a11y-color-text-yellow: hsla(51, 100%, 50%, 1);
+      --prism-a11y-plugin-color-border: hsla(51, 100%, 50%, 0.55);
+      --prism-a11y-plugin-color-background: hsla(51, 100%, 50%, 0.1);
     }
   }
 
