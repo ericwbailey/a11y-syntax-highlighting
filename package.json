@@ -2,7 +2,7 @@
   "name": "a11y-syntax-highlighting",
   "description": "Accessible light and dark syntax highlighting themes.",
   "homepage": "https://github.com/ericwbailey/a11y-syntax-highlighting",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "license": "MIT",
   "author": "Eric Bailey <eric.w.bailey@gmail.com> (http://ericwbailey.website/)",
   "repository": {
