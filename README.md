@@ -51,7 +51,7 @@ Other [services are also supported](#supported).
 | No token | `#F8F8F2` | [13.28:1](https://webaim.org/resources/contrastchecker/?fcolor=F8F8F2&bcolor=2B2B2B) | AAA | AAA |
 | Comment | `#D4D0AB` | [9.04:1](https://webaim.org/resources/contrastchecker/?fcolor=D4D0AB&bcolor=2B2B2B) | AAA | AAA |
 | Blue | `#6BBEFF` | [7.03:1](https://webaim.org/resources/contrastchecker/?fcolor=6BBEFF&bcolor=2B2B2B) | AAA | AAA |
-| Cyan | `#66DDEC` | [8.58:1](https://webaim.org/resources/contrastchecker/?fcolor=00E0E0&bcolor=2B2B2B) | AAA | AAA |
+| Cyan | `#66DDEC` | [8.84:1](https://webaim.org/resources/contrastchecker/?fcolor=66DDEC&bcolor=2B2B2B) | AAA | AAA |
 | Green | `#ABE338` | [9.28:1](https://webaim.org/resources/contrastchecker/?fcolor=ABE338&bcolor=2B2B2B) | AAA | AAA |
 | Gray | `#F8F8F2` | [13.28:1](https://webaim.org/resources/contrastchecker/?fcolor=ABE338&bcolor=2B2B2B) | AAA | AAA |
 | Orange | `#F5AB32` | [7.25:1](https://webaim.org/resources/contrastchecker/?fcolor=F5AB32&bcolor=2B2B2B) | AAA | AAA |
