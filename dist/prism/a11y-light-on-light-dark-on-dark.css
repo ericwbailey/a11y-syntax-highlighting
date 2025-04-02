@@ -26,7 +26,8 @@
       --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
       --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
       --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
-      --prism-a11y-color-text-blue: hsla(195, 100%, 30%, 1);
+      --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+      --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
       --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
       --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
       --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
@@ -42,7 +43,8 @@
       --prism-a11y-color-background: hsla(0, 0%, 17%, 1);
       --prism-a11y-color-text-no-token: hsla(60, 30%, 96%, 1);
       --prism-a11y-color-text-comment: hsla(54, 32%, 75%, 1);
-      --prism-a11y-color-text-blue: hsla(180, 100%, 44%, 1);
+      --prism-a11y-color-text-blue: hsla(206, 100%, 71%, 1);
+      --prism-a11y-color-text-cyan: hsla(187, 77.9%, 66.3%, 1);
       --prism-a11y-color-text-green: hsla(80, 75%, 55%, 1);
       --prism-a11y-color-text-gray: hsla(60, 30%, 96%, 1);
       --prism-a11y-color-text-purple: hsla(291, 30%, 83%, 1);
@@ -136,7 +138,7 @@
       .token.variable,
       .token.keyword
     ) {
-      color: var(--prism-a11y-color-text-blue);
+      color: var(--prism-a11y-color-text-cyan);
     }
 
     :where(
@@ -213,7 +215,7 @@
       --prism-a11y-color-background: Canvas;
       --prism-a11y-color-text-no-token: CanvasText;
       --prism-a11y-color-text-comment: GrayText;
-      --prism-a11y-color-text-blue: LinkText;
+      --prism-a11y-color-text-cyan: LinkText;
       --prism-a11y-color-text-gray: LinkText;
       --prism-a11y-color-text-green: CanvasText;
       --prism-a11y-color-text-purple: CanvasText;

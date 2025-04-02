@@ -26,6 +26,8 @@ Other [services are also supported](#supported).
 - [macOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DrawColor/Concepts/AboutColorLists.html)
 - [Vim](https://www.vim.org/)
 - [Xcode](https://developer.apple.com/xcode/)
+- [macOS Terminal](https://support.apple.com/guide/terminal/welcome/mac)
+- [iTerm](https://iterm2.com/)
 
 ### Misc
 
@@ -48,7 +50,8 @@ Other [services are also supported](#supported).
 | Background | `#2B2B2B` | N/A | N/A | N/A |
 | No token | `#F8F8F2` | [13.28:1](https://webaim.org/resources/contrastchecker/?fcolor=F8F8F2&bcolor=2B2B2B) | AAA | AAA |
 | Comment | `#D4D0AB` | [9.04:1](https://webaim.org/resources/contrastchecker/?fcolor=D4D0AB&bcolor=2B2B2B) | AAA | AAA |
-| Blue | `#00E0E0` | [8.58:1](https://webaim.org/resources/contrastchecker/?fcolor=00E0E0&bcolor=2B2B2B) | AAA | AAA |
+| Blue | `#6BBEFF` | [7.03:1](https://webaim.org/resources/contrastchecker/?fcolor=6BBEFF&bcolor=2B2B2B) | AAA | AAA |
+| Cyan | `#66DDEC` | [8.84:1](https://webaim.org/resources/contrastchecker/?fcolor=66DDEC&bcolor=2B2B2B) | AAA | AAA |
 | Green | `#ABE338` | [9.28:1](https://webaim.org/resources/contrastchecker/?fcolor=ABE338&bcolor=2B2B2B) | AAA | AAA |
 | Gray | `#F8F8F2` | [13.28:1](https://webaim.org/resources/contrastchecker/?fcolor=ABE338&bcolor=2B2B2B) | AAA | AAA |
 | Orange | `#F5AB32` | [7.25:1](https://webaim.org/resources/contrastchecker/?fcolor=F5AB32&bcolor=2B2B2B) | AAA | AAA |
@@ -69,7 +72,8 @@ Other [services are also supported](#supported).
 | Background | `#FEFEFE` | N/A | N/A | N/A |
 | No token | `#545454` | [7.5:1](https://webaim.org/resources/contrastchecker/?fcolor=545454&bcolor=FEFEFE) | AAA | AAA |
 | Comment | `#802200` | [9.69:1](https://webaim.org/resources/contrastchecker/?fcolor=802200&bcolor=FEFEFE) | AAA | AAA |
-| Blue | `#007299` | [5.38:1](https://webaim.org/resources/contrastchecker/?fcolor=007299&bcolor=FEFEFE) | AA | AAA |
+| Blue | `#326BAD` | [5.41:1](https://webaim.org/resources/contrastchecker/?fcolor=326BAD&bcolor=FEFEFE) | AA | AAA |
+| Cyan | `#1F7C93` | [4.77:1](https://webaim.org/resources/contrastchecker/?fcolor=007299&bcolor=FEFEFE) | AA | AAA |
 | Green | `#008000` | [5.09:1](https://webaim.org/resources/contrastchecker/?fcolor=008000&bcolor=FEFEFE) | AA | AAA |
 | Gray | `#696969` | [5.44:1](https://webaim.org/resources/contrastchecker/?fcolor=696969&bcolor=FEFEFE) | AA | AAA |
 | Orange | `#A85D00` | [4.92:1](https://webaim.org/resources/contrastchecker/?fcolor=A85D00&bcolor=FEFEFE) | AA | AAA |

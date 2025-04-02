@@ -17,7 +17,8 @@
       --highlight-a11y-color-background: hsla(0, 0%, 17%, 1);
       --highlight-a11y-color-text-no-token: hsla(60, 30%, 96%, 1);
       --highlight-a11y-color-text-comment: hsla(54, 32%, 75%, 1);
-      --highlight-a11y-color-text-blue: hsla(180, 100%, 44%, 1);
+      --highlight-a11y-color-text-blue: hsla(206, 100%, 71%, 1);
+      --highlight-a11y-color-text-cyan: hsla(187, 77.9%, 66.3%, 1);
       --highlight-a11y-color-text-green: hsla(80, 75%, 55%, 1);
       --highlight-a11y-color-text-orange: hsla(37, 91%, 58%, 1);
       --highlight-a11y-color-text-purple: hsla(291, 30%, 83%, 1);
@@ -31,7 +32,8 @@
       --highlight-a11y-color-background: hsla(0, 0%, 100%, 1);
       --highlight-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
       --highlight-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
-      --highlight-a11y-color-text-blue: hsla(195, 100%, 30%, 1);
+      --highlight-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+      --highlight-a11y-color-text-cyan: hsla(195, 100%, 30%, 1);
       --highlight-a11y-color-text-green: hsla(120, 100%, 25%, 1);
       --highlight-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
       --highlight-a11y-color-text-red: hsla(2, 80%, 47%, 1);
@@ -103,7 +105,7 @@
     .hljs-title,
     .hljs-section 
     ) {
-      color: var(--highlight-a11y-color-text-blue);
+      color: var(--highlight-a11y-color-text-cyan);
     }
 
     /* Purple */
@@ -146,7 +148,7 @@
       --highlight-a11y-color-background: Canvas;
       --highlight-a11y-color-text-no-token: CanvasText;
       --highlight-a11y-color-text-comment: GrayText;
-      --highlight-a11y-color-text-blue: LinkText;
+      --highlight-a11y-color-text-cyan: LinkText;
       --highlight-a11y-color-text-gray: LinkText;
       --highlight-a11y-color-text-green: CanvasText;
       --highlight-a11y-color-text-orange: CanvasText;
