@@ -163,6 +163,7 @@ I'm not interested in that, but modifying the CSS Custom Property values is a go
 - [Paul Kinchla](https://paulkinchla.com/blog/)
 - [Quarto](https://quarto.org/docs/output-formats/html-code.html#highlighting)
 - [Sarah Higley](https://sarahmhigley.com/writing/)
+- [24 jours de web](https://www.24joursdeweb.fr/)
 - [Zeroheight](https://zeroheight.com/)
 - [W3C Design System](https://design-system.w3.org/)
 
