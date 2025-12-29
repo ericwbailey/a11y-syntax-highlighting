@@ -147,6 +147,7 @@ I'm not interested in that, but modifying the CSS Custom Property values is a go
 
 ## Roadmap
 
+- [CSS Highlights API](https://pavi2410.com/blog/high-performance-syntax-highlighting-with-css-highlights-api/)
 - [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
 
