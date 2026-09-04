@@ -162,6 +162,7 @@ I'm not interested in that, but modifying the CSS Custom Property values is a go
 - [Mark Llobrera](https://markllobrera.com/)
 - [Melanie Richards](https://melanie-richards.com/)
 - [Oddbird CSS Sandbox](https://css.oddbird.net/)
+- [Ottorino Bruni](https://www.ottorinobruni.com/)
 - [Paul Kinchla](https://paulkinchla.com/blog/)
 - [Quarto](https://quarto.org/docs/output-formats/html-code.html#highlighting)
 - [Sarah Higley](https://sarahmhigley.com/writing/)
